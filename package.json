@@ -1,0 +1,20 @@
+{
+  "name": "local-web-server-compress",
+  "author": "Lloyd Brookes <75pound@gmail.com>",
+  "version": "0.0.0",
+  "description": "compress",
+  "repository": "https://github.com/local-web-server/compress.git",
+  "license": "MIT",
+  "main": "./lib/compress.js",
+  "keywords": [],
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "tape test/*.js",
+    "docs": "jsdoc2md -t jsdoc2md/README.md lib/*.js > README.md; echo"
+  },
+  "dependencies": {
+    "koa-compress": "^2.0.0"
+  }
+}
