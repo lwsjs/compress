@@ -16,11 +16,5 @@
   },
   "dependencies": {
     "koa-compress": "^2.0.0"
-  },
-  "devDependencies": {
-    "local-web-server": "file:///Users/lloydb/Documents/local-web-server/local-web-server",
-    "local-web-server-static": "github:local-web-server/static",
-    "req-then": "^0.2.4",
-    "tape": "^4.6.0"
   }
 }
