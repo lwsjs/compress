@@ -1,14 +1,14 @@
 {
-  "name": "local-web-server-compress",
+  "name": "lws-compress",
   "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "0.0.0",
   "description": "compress",
-  "repository": "https://github.com/local-web-server/compress.git",
+  "repository": "https://github.com/lwsjs/compress.git",
   "license": "MIT",
   "main": "./lib/compress.js",
   "keywords": [],
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "tape test/*.js",
