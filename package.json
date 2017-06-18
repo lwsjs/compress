@@ -1,16 +1,17 @@
 {
   "name": "lws-compress",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "compress",
   "repository": "https://github.com/lwsjs/compress.git",
   "license": "MIT",
-  "keywords": [ "lws" ],
+  "keywords": [
+    "lws"
+  ],
   "engines": {
     "node": ">=7.6"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "dependencies": {
     "koa-compress": "^2.0.0"
   }
