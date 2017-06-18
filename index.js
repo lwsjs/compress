@@ -1,6 +1,9 @@
 'use strict'
 
-class Compress {
+module.exports = MiddlewareBase => class Compress extends MiddlewareBase {
+  description () {
+    return 'Compress responses using gzip.'
+  }
   optionDefinitions () {
     return [
       {
@@ -25,5 +28,3 @@ class Compress {
     }
   }
 }
-
-module.exports = Compress

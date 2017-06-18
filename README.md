@@ -1,7 +1,7 @@
-[![view on npm](http://img.shields.io/npm/v/compress.svg)](https://www.npmjs.org/package/compress)
-[![npm module downloads](http://img.shields.io/npm/dt/compress.svg)](https://www.npmjs.org/package/compress)
-[![Build Status](https://travis-ci.org/local-web-server/compress.svg?branch=master)](https://travis-ci.org/local-web-server/compress)
-[![Dependency Status](https://david-dm.org/local-web-server/compress.svg)](https://david-dm.org/local-web-server/compress)
+[![view on npm](https://img.shields.io/npm/v/lws-compress.svg)](https://www.npmjs.org/package/lws-compress)
+[![npm module downloads](https://img.shields.io/npm/dt/lws-compress.svg)](https://www.npmjs.org/package/lws-compress)
+[![Build Status](https://travis-ci.org/lwsjs/compress.svg?branch=master)](https://travis-ci.org/lwsjs/compress)
+[![Dependency Status](https://david-dm.org/lwsjs/compress.svg)](https://david-dm.org/lwsjs/compress)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
-# compress
+# lws-compress

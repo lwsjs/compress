@@ -5,14 +5,11 @@
   "description": "compress",
   "repository": "https://github.com/lwsjs/compress.git",
   "license": "MIT",
-  "main": "./lib/compress.js",
-  "keywords": [],
+  "keywords": [ "lws" ],
   "engines": {
-    "node": ">=4"
+    "node": ">=7.6"
   },
   "scripts": {
-    "test": "tape test/*.js",
-    "docs": "jsdoc2md -t jsdoc2md/README.md lib/*.js > README.md; echo"
   },
   "dependencies": {
     "koa-compress": "^2.0.0"
