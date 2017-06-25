@@ -1,23 +1,33 @@
-'use strict'
-const test = require('tape')
+const TestRunner = require('test-runner')
+const Compress = require('../')
+const Lws = require('lws')
 const request = require('req-then')
-const LocalWebServer = require('local-web-server')
+const url = require('url')
+const runner = new TestRunner()
+const a = require('assert')
 
-test('compress', function (t) {
-  t.plan(2)
-  const ws = new LocalWebServer({
-    stack: [ require('../'), require('local-web-server-static') ],
-    port: 8100,
+runner.test('simple', async function () {
+  const port = 8000 + this.index
+  const lws = new Lws()
+  const One = MiddlewareBase => class extends MiddlewareBase {
+    middleware (options) {
+      return async function (ctx, next) {
+        await next()
+        const fs = require('fs')
+        ctx.body = fs.readFileSync('test/big-file.txt', 'utf8')
+      }
+    }
+  }
+  const server = lws.create({
+    port,
+    stack: [ One, Compress ],
     compress: true
   })
-  ws.listen()
-    .then(() => {
-      request('http://localhost:8100/test/big-file.txt', { headers: { 'Accept-Encoding': 'gzip' } })
-        .then(response => {
-          t.strictEqual(response.res.statusCode, 200)
-          t.strictEqual(response.res.headers['content-encoding'], 'gzip')
-        })
-        .then(ws.close.bind(ws))
-        .catch(err => t.fail('failed: ' + err.stack))
-    })
+  const reqOptions = url.parse(`http://localhost:${port}/`)
+  reqOptions.headers = {
+    'Accept-Encoding': 'gzip'
+  }
+  const response = await request(reqOptions)
+  server.close()
+  a.strictEqual(response.res.headers.vary, 'Accept-Encoding')
 })

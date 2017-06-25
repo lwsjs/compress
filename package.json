@@ -2,7 +2,7 @@
   "name": "lws-compress",
   "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "0.2.0",
-  "description": "compress",
+  "description": "Response compression middleware for lws",
   "repository": "https://github.com/lwsjs/compress.git",
   "license": "MIT",
   "keywords": [
@@ -11,8 +11,15 @@
   "engines": {
     "node": ">=7.6"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "node test/test.js"
+  },
   "dependencies": {
     "koa-compress": "^2.0.0"
+  },
+  "devDependencies": {
+    "lws": "^1.0.0-pre2.2",
+    "req-then": "^0.6.2",
+    "test-runner": "^0.4.0"
   }
 }

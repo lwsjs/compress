@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports = MiddlewareBase => class Compress extends MiddlewareBase {
   description () {
     return 'Compress responses using gzip.'
@@ -19,12 +17,14 @@ module.exports = MiddlewareBase => class Compress extends MiddlewareBase {
       }
     ]
   }
-  middleware(options) {
+  middleware (options) {
     options = options || {}
-    if (options.compress) {
-      return require('koa-compress')({
-        threshold: options['compress.threshold']
-      })
+    const mwOptions = {}
+    if (options.compress) mwOptions.compress = true
+    if (options.compressThreshold) mwOptions.threshold = options.compressThreshold
+    if (mwOptions.compress) {
+      this.emit('verbose', 'middleware.compress.config', mwOptions)
+      return require('koa-compress')(mwOptions)
     }
   }
 }

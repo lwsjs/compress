@@ -5,3 +5,9 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 # lws-compress
+
+Response compression middleware for lws. For usage instructions, see [here](https://github.com/lwsjs/local-web-server/wiki/How-to-use-response-compression).
+
+* * *
+
+&copy; 2017 Lloyd Brookes <75pound@gmail.com>.
