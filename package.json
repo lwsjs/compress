@@ -18,8 +18,8 @@
     "koa-compress": "^2.0.0"
   },
   "devDependencies": {
-    "lws": "^1.0.0-pre2.2",
-    "req-then": "^0.6.2",
+    "lws": "^1.0.0-pre3.1",
+    "req-then": "^0.6.4",
     "test-runner": "^0.4.0"
   }
 }
