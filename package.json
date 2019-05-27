@@ -9,17 +9,20 @@
     "lws"
   ],
   "engines": {
-    "node": ">=7.6"
+    "node": ">=8"
   },
   "scripts": {
-    "test": "node test/test.js"
+    "test": "test-runner test/test.js"
   },
   "dependencies": {
-    "koa-compress": "^2.0.0"
+    "koa-compress": "^3.0.0"
   },
   "devDependencies": {
-    "lws": "^1.0.0-pre3.1",
-    "req-then": "^0.6.4",
-    "test-runner": "^0.4.0"
-  }
+    "lws": "^2.0.0-4",
+    "node-fetch": "^2.6.0",
+    "test-runner": "^0.6.0"
+  },
+  "files": [
+    "index.js"
+  ]
 }

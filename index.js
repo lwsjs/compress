@@ -1,7 +1,10 @@
-module.exports = MiddlewareBase => class Compress extends MiddlewareBase {
+const EventEmitter = require('events')
+
+class Compress extends EventEmitter {
   description () {
     return 'Compress responses using gzip.'
   }
+
   optionDefinitions () {
     return [
       {
@@ -17,6 +20,7 @@ module.exports = MiddlewareBase => class Compress extends MiddlewareBase {
       }
     ]
   }
+
   middleware (options) {
     options = options || {}
     const mwOptions = {}
@@ -28,3 +32,5 @@ module.exports = MiddlewareBase => class Compress extends MiddlewareBase {
     }
   }
 }
+
+module.exports = Compress

@@ -1,15 +1,15 @@
-const TestRunner = require('test-runner')
+const Tom = require('test-runner').Tom
 const Compress = require('../')
 const Lws = require('lws')
-const request = require('req-then')
-const url = require('url')
-const runner = new TestRunner()
+const fetch = require('node-fetch')
 const a = require('assert')
 
-runner.test('simple', async function () {
+const tom = module.exports = new Tom('compress')
+
+tom.test('simple', async function () {
   const port = 8000 + this.index
   const lws = new Lws()
-  const One = MiddlewareBase => class extends MiddlewareBase {
+  class One {
     middleware (options) {
       return async function (ctx, next) {
         await next()
@@ -18,16 +18,16 @@ runner.test('simple', async function () {
       }
     }
   }
-  const server = lws.create({
+  const server = lws.listen({
     port,
     stack: [ One, Compress ],
     compress: true
   })
-  const reqOptions = url.parse(`http://localhost:${port}/`)
-  reqOptions.headers = {
-    'Accept-Encoding': 'gzip'
-  }
-  const response = await request(reqOptions)
+  const response = await fetch(`http://localhost:${port}/`, {
+    headers: {
+      'Accept-Encoding': 'gzip'
+    }
+  })
   server.close()
-  a.strictEqual(response.res.headers.vary, 'Accept-Encoding')
+  a.strictEqual(response.headers.get('vary'), 'Accept-Encoding')
 })
