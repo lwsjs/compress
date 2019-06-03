@@ -8,7 +8,6 @@ const tom = module.exports = new Tom('compress')
 
 tom.test('simple', async function () {
   const port = 8000 + this.index
-  const lws = new Lws()
   class One {
     middleware (options) {
       return async function (ctx, next) {
@@ -18,7 +17,7 @@ tom.test('simple', async function () {
       }
     }
   }
-  const server = lws.listen({
+  const lws = Lws.create({
     port,
     stack: [ One, Compress ],
     compress: true
@@ -28,6 +27,6 @@ tom.test('simple', async function () {
       'Accept-Encoding': 'gzip'
     }
   })
-  server.close()
+  lws.server.close()
   a.strictEqual(response.headers.get('vary'), 'Accept-Encoding')
 })
