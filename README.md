@@ -8,6 +8,13 @@
 
 Response compression middleware for lws. For usage instructions, see [here](https://github.com/lwsjs/local-web-server/wiki/How-to-use-response-compression).
 
+Adds the following options to lws.
+
+```
+--compress, -z                 Serve gzip-compressed resources, where applicable.
+--compress.threshold number    Minimum response size in bytes to apply compression. Defaults to 1024.
+```
+
 * * *
 
 &copy; 2016-19 Lloyd Brookes \<75pound@gmail.com\>.

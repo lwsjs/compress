@@ -16,7 +16,7 @@ class Compress extends EventEmitter {
       {
         name: 'compress.threshold',
         type: Number,
-        description: 'Minimum response size in bytes to apply compression. Defaults to 1024 bytes.'
+        description: 'Minimum response size in bytes to apply compression. Defaults to 1024.'
       }
     ]
   }
