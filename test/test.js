@@ -2,7 +2,7 @@ const Tom = require('test-runner').Tom
 const Compress = require('../')
 const Lws = require('lws')
 const fetch = require('node-fetch')
-const a = require('assert')
+const a = require('assert').strict
 
 const tom = module.exports = new Tom('compress')
 
@@ -28,5 +28,5 @@ tom.test('simple', async function () {
     }
   })
   lws.server.close()
-  a.strictEqual(response.headers.get('vary'), 'Accept-Encoding')
+  a.equal(response.headers.get('vary'), 'Accept-Encoding')
 })
