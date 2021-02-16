@@ -16,7 +16,7 @@
     "test": "test-runner test/test.js"
   },
   "dependencies": {
-    "koa-compress": "^3.0.0"
+    "koa-compress": "^5.0.1"
   },
   "devDependencies": {
     "lws": "^2.0.8",
