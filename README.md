@@ -1,7 +1,8 @@
-[![view on npm](https://img.shields.io/npm/v/lws-compress.svg)](https://www.npmjs.org/package/lws-compress)
-[![npm module downloads](https://img.shields.io/npm/dt/lws-compress.svg)](https://www.npmjs.org/package/lws-compress)
-[![Build Status](https://badgen.net/david/dep/lwsjs/compress)](https://travis-ci.org/lwsjs/compress)
-[![Dependency Status](https://david-dm.org/lwsjs/compress.svg)](https://david-dm.org/lwsjs/compress)
+[![view on npm](https://badgen.net/npm/v/lws-compress)](https://www.npmjs.org/package/lws-compress)
+[![npm module downloads](https://badgen.net/npm/dt/lws-compress)](https://www.npmjs.org/package/lws-compress)
+[![Gihub repo dependents](https://badgen.net/github/dependents-repo/lwsjs/compress)](https://github.com/lwsjs/compress/network/dependents?dependent_type=REPOSITORY)
+[![Gihub package dependents](https://badgen.net/github/dependents-pkg/lwsjs/compress)](https://github.com/lwsjs/compress/network/dependents?dependent_type=PACKAGE)
+[![Build Status](https://travis-ci.org/lwsjs/compress.svg?branch=master)](https://travis-ci.org/lwsjs/compress)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 # lws-compress
@@ -17,4 +18,4 @@ Adds the following options to lws.
 
 * * *
 
-&copy; 2016-20 Lloyd Brookes \<75pound@gmail.com\>.
+&copy; 2016-21 Lloyd Brookes \<75pound@gmail.com\>.

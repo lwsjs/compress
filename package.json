@@ -10,7 +10,7 @@
     "lws-middleware"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=14"
   },
   "scripts": {
     "test": "test-runner test/test.js"
@@ -19,8 +19,8 @@
     "koa-compress": "^5.0.1"
   },
   "devDependencies": {
-    "lws": "^2.0.8",
-    "node-fetch": "^2.6.0",
+    "lws": "^3.1.0",
+    "node-fetch": "^2.6.1",
     "test-runner": "^0.8.13"
   },
   "files": [
