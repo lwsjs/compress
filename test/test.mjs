@@ -1,23 +1,23 @@
-const Tom = require('test-runner').Tom
-const Compress = require('../')
-const Lws = require('lws')
-const fetch = require('node-fetch')
-const a = require('assert').strict
+import TestRunner from 'test-runner'
+import Compress from 'lws-compress'
+import Lws from 'lws'
+import fetch from 'node-fetch'
+import { strict as a } from 'assert'
+import { promises as fs } from 'fs'
 
-const tom = module.exports = new Tom('compress')
+const tom = new TestRunner.Tom()
 
 tom.test('gzip', async function () {
   const port = 8000 + this.index
   class One {
     middleware (options) {
       return async function (ctx, next) {
-        const fs = require('fs')
-        ctx.body = fs.readFileSync('test/big-file.txt', 'utf8')
+        ctx.body = await fs.readFile('test/big-file.txt', 'utf8')
         await next()
       }
     }
   }
-  const lws = Lws.create({
+  const lws = await Lws.create({
     port,
     stack: [ One, Compress ],
     compress: true
@@ -37,13 +37,12 @@ tom.test('br', async function () {
   class One {
     middleware (options) {
       return async function (ctx, next) {
-        const fs = require('fs')
-        ctx.body = fs.readFileSync('test/big-file.txt', 'utf8')
+        ctx.body = await fs.readFile('test/big-file.txt', 'utf8')
         await next()
       }
     }
   }
-  const lws = Lws.create({
+  const lws = await Lws.create({
     port,
     stack: [ One, Compress ],
     compress: true
@@ -58,3 +57,5 @@ tom.test('br', async function () {
   a.equal(response.headers.get('vary'), 'Accept-Encoding')
   a.deepEqual(response.headers.get('content-encoding'), 'br')
 })
+
+export default tom

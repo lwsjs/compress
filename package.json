@@ -3,27 +3,28 @@
   "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "3.0.0",
   "description": "Response compression middleware for lws",
-  "repository": "https://github.com/lwsjs/compress.git",
+  "repository": "https://github.com/lwsjs/compress",
   "license": "MIT",
   "keywords": [
     "lws",
     "lws-middleware"
   ],
+  "exports": "./index.mjs",
   "engines": {
-    "node": ">=14"
+    "node": ">=12.17"
   },
   "scripts": {
-    "test": "test-runner test/test.js"
+    "test": "test-runner test/test.mjs"
   },
   "dependencies": {
     "koa-compress": "^5.0.1"
   },
   "devDependencies": {
-    "lws": "^3.1.0",
+    "lws": "^4.1.0",
     "node-fetch": "^2.6.1",
-    "test-runner": "^0.8.13"
+    "test-runner": "^0.9.8"
   },
   "files": [
-    "index.js"
+    "index.mjs"
   ]
 }

@@ -2,7 +2,7 @@
 [![npm module downloads](https://badgen.net/npm/dt/lws-compress)](https://www.npmjs.org/package/lws-compress)
 [![Gihub repo dependents](https://badgen.net/github/dependents-repo/lwsjs/compress)](https://github.com/lwsjs/compress/network/dependents?dependent_type=REPOSITORY)
 [![Gihub package dependents](https://badgen.net/github/dependents-pkg/lwsjs/compress)](https://github.com/lwsjs/compress/network/dependents?dependent_type=PACKAGE)
-[![Build Status](https://travis-ci.org/lwsjs/compress.svg?branch=master)](https://travis-ci.org/lwsjs/compress)
+[![Node.js CI](https://github.com/lwsjs/compress/actions/workflows/node.js.yml/badge.svg)](https://github.com/lwsjs/compress/actions/workflows/node.js.yml)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 # lws-compress

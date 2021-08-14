@@ -1,4 +1,5 @@
-const EventEmitter = require('events')
+import EventEmitter from 'events'
+import koaCompress from 'koa-compress'
 
 class Compress extends EventEmitter {
   description () {
@@ -21,16 +22,15 @@ class Compress extends EventEmitter {
     ]
   }
 
-  middleware (options) {
-    options = options || {}
+  middleware (options = {}) {
     const mwOptions = {}
     if (options.compress) mwOptions.compress = true
     if (options.compressThreshold) mwOptions.threshold = options.compressThreshold
     if (mwOptions.compress) {
       this.emit('verbose', 'middleware.compress.config', mwOptions)
-      return require('koa-compress')(mwOptions)
+      return koaCompress(mwOptions)
     }
   }
 }
 
-module.exports = Compress
+export default Compress
