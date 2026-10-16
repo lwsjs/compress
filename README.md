@@ -18,4 +18,4 @@ Adds the following options to lws.
 
 * * *
 
-&copy; 2016-21 Lloyd Brookes \<75pound@gmail.com\>.
+&copy; 2016-26 Lloyd Brookes \<opensource@75lb.com\>.

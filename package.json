@@ -1,6 +1,6 @@
 {
   "name": "lws-compress",
-  "author": "Lloyd Brookes <75pound@gmail.com>",
+  "author": "Lloyd Brookes <opensource@75lb.com>",
   "version": "3.1.0",
   "description": "Response compression middleware for lws",
   "repository": "https://github.com/lwsjs/compress",
